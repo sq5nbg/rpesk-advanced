@@ -1,3 +1,6 @@
+02_reaction_game.py is just slightly modified to work under Python3 and python3-gpiozero.
+
+
 This repository contains the code needed for the advanced projects for use with Simon Monk's Raspberry Pi Electronics Starter Kit. This can be purchased by following the links on the product page found here: https://www.monkmakes.com/rpi_esk/
 
 PDF files for the instructions of the assembly of these projects can be found here: www.raspberrypitutorials.yolasite.com/electronics-starter-kit.php
