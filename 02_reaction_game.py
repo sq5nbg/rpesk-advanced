@@ -16,8 +16,8 @@ button_1 = Button(24)
 button_2 = Button(2)
 
 #Input player names
-player_1 = raw_input("Enter the name of Player 1: ")
-player_2 = raw_input("Enter the name of Player 2: ")
+player_1 = input("Enter the name of Player 1: ")
+player_2 = input("Enter the name of Player 2: ")
 
 #Initialise score variables
 player_1_score = 0
@@ -43,9 +43,9 @@ while True:
     if color_2 == 0 and color_3 == 0:   #If all colours are off by chance
         color_2 = 1                     #Set green pixel to on
 
-    print " "                               #Print blank line for better formatting
-    print "Round", str(round_num) + ":"     #Print round number
-    print "Get Ready!"
+    print(" ")                               #Print blank line for better formatting
+    print("Round", str(round_num) + ":")     #Print round number
+    print("Get Ready!")
     
     sleep(time)     #Wait for random amount of time
 
@@ -57,44 +57,44 @@ while True:
 
     while True:
         if button_1.is_pressed and trick == False:                      #If player 1 button is pressed
-            print player_1, "wins!"                                     #Display winning message
+            print(player_1, "wins!")                                     #Display winning message
             player_1_score = player_1_score + 1                         #Increment score by one
             rgb.color = (0,0,0)                                         #Turn LED off
-            print player_1, ":", player_1_score                         #Display scores
-            print player_2, ":", player_2_score
+            print(player_1, ":", player_1_score)                         #Display scores
+            print(player_2, ":", player_2_score)
             wait = 0                                                    #Reset wait value
             break
         elif button_1.is_pressed and trick == True:
-            print player_1, "Oh dear!"                                  #Display winning message
+            print(player_1, "Oh dear!")                                  #Display winning message
             player_1_score = player_1_score - 1                         #Increment score by one
             rgb.color = (0,0,0)                                         #Turn LED off
-            print player_1, ":", player_1_score                         #Display scores
-            print player_2, ":", player_2_score
+            print(player_1, ":", player_1_score)                         #Display scores
+            print(player_2, ":", player_2_score)
             wait = 0 
             break
         
         if button_2.is_pressed and trick == False:
-            print player_2, "wins!"
+            print(player_2, "wins!")
             player_2_score = player_2_score + 1
             rgb.color = (0,0,0)
-            print player_1, ":", player_1_score
-            print player_2, ":", player_2_score
+            print(player_1, ":", player_1_score)
+            print(player_2, ":", player_2_score)
             wait = 0 
             break
         elif button_2.is_pressed and trick == True:
-            print player_2, "Oh dear!"
+            print(player_2, "Oh dear!")
             player_2_score = player_2_score - 1
             rgb.color = (0,0,0)
-            print player_1, ":", player_1_score
-            print player_2, ":", player_2_score
+            print(player_1, ":", player_1_score)
+            print(player_2, ":", player_2_score)
             wait = 0 
             break
 
         if trick == True and wait == 100000:                            #If on trick question time out after approx 5 seconds
-            print "Well Done"
+            print("Well Done")
             rgb.color = (0,0,0)
-            print player_1, ":", player_1_score
-            print player_2, ":", player_2_score
+            print(player_1, ":", player_1_score)
+            print(player_2, ":", player_2_score)
             wait = 0
             break
         
